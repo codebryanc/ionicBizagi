@@ -15,6 +15,8 @@ imprimir("Alejandro", undefined);
 
 imprimir("Bryan", "Cubillos");
 
+imprimir("Bryan", NaN);
+
 // Enviar objetos primitivos
 // Enviar objetos
 // Enviar Funciones
@@ -28,8 +30,8 @@ var persona = {
     apellido: "Cubillos Prieto"
 }
 
-imprimirFuncion(function(){ console.log("Funcion anonima") })
+imprimirFuncion(function fnInicial(){ console.log("Funcion anonima") })
 
-var miFn = function(){ console.log("Funcion anonima 2") }
+var miFn = function fnSecundaria(){ console.log("Funcion anonima 2") }
 
 imprimirFuncion(miFn);

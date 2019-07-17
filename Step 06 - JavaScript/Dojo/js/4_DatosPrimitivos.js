@@ -13,3 +13,17 @@ var objeto = {
         propiedadNumerica: 10
     }
 }
+
+var person = {
+    isHuman: true,
+    hijo: {
+        nombre: "Juan",
+        edad: 12
+    }
+};
+
+var resultadoObjeto = Object.create(person);
+
+var nuevoObj = objeto;
+
+// Cuando usamos el operador NEW el comportamiento es diferente
