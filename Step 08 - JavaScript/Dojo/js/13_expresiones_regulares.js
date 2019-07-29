@@ -5,7 +5,8 @@
        
        En JavaScript, las expresiones regulares también son objetos.
        
-       Estos patrones se utilizan en los métodos exec y test de RegExp, así como los métodos match, replace, search y split de String.
+       Estos patrones se utilizan en los métodos exec y test de RegExp, así como los métodos match, replace, 
+       search y split de String.
        
     */
 
@@ -53,8 +54,8 @@
         console.log(arreglo);
     }
 
-    // validarRegex(texto, reg1);
-    // validarRegex(texto, reg2);
+    validarRegex(texto, reg1);
+    validarRegex(texto, reg2);
 
     // console.log('/a/ ', texto.match(/a/)); // es lo mismo
     // console.log('/^h/ ', texto.match(/^h/)); // busca en la misma posicion

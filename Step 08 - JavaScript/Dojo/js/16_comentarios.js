@@ -27,7 +27,7 @@ var arr = ["Bryan",
             true,
             // Funcion de la cuarta posición ...
             function(){
-                // Instrimentación del objeto
+                // Instrumentación del objeto
                 console.log(this);
             }
 

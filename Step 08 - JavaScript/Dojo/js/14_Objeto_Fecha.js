@@ -25,17 +25,17 @@
 
 // tercer console
 
-    // console.log('fecha actual : ', fecha);
+    console.log('fecha actual : ', fecha);
     
-    //fecha = fecha + 5; // No funcionó LO deja al final como un text, cambia el tipo a string
+    // fecha = fecha + 5; // No funcionó LO deja al final como un text, cambia el tipo a string
     // console.log('fecha + 5', fecha);
 
     // como debemos hacerlo
     fecha.setDate(25);
-    // console.log('fecha setdate 25', fecha);
+    console.log('fecha setdate 25', fecha);
 
     fecha.setDate(32); // Suma el mes y cambia de día
-    // console.log('fecha setdate 32', fecha);
+    console.log('fecha setdate 32', fecha);
 
     Date.prototype.sumarDias = function(dias){
         this.setDate(this.getDate() + dias);

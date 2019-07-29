@@ -8,9 +8,9 @@
 
 var demo = "123;123*123'123/ 1";
 
-// console.log('texto original', demo);
-// console.log('escape', escape(demo));
-// console.log('unescape, escape', unescape(escape(demo)));
+console.log('texto original', demo);
+console.log('escape', escape(demo));
+console.log('unescape, escape', unescape(escape(demo)));
 
 // Escapar es cambiar caracteres que pueden generar errores, por caracteres permitidos
 
@@ -23,7 +23,7 @@ function crearCookie(nombre, valor){
     hoy.setMonth(hoy.getMonth() + 1);
 
     // new cookie
-    document.cookie = nombre + "=" + valor + "; expires=" + hoy.toUTCString() + ";";
+    document.cookie = nombre + '=' + valor + ';' + "; expires=" + hoy.toUTCString() + ";";
 }
 
 function borrarCookie(nombre){
@@ -32,7 +32,7 @@ function borrarCookie(nombre){
     hoy.setMonth(hoy.getMonth() - 1);
 
     // delete
-    document.cookie = nombre + "="+null+";expires=" + hoy.toUTCString() + ";";
+    document.cookie = nombre + "="+ null +"; expires=" + hoy.toUTCString() + ";";
 }
 
 function obtenerCookie(nombre){
@@ -41,7 +41,7 @@ function obtenerCookie(nombre){
     var valorCookie = undefined;
 
     let cookies = document.cookie;
-    var cookieArr = cookies.split('; '); // Nuestra convención para dividir (llave:valor); cookie; cookie;
+    var cookieArr = cookies.split(';'); // Nuestra convención para dividir (llave:valor); cookie; cookie;
 
     // cookieArr.forEach(cookie => {
     //     let nombreValor = cookie.split("=");
@@ -68,13 +68,19 @@ function obtenerCookie(nombre){
     return valorCookie;
 }
 
- crearCookie('nombre', 'Bryan');
-// crearCookie('correo', 'Bryan@hotmail.com');
-// crearCookie('direccion', 'San José, Costa Rica');
+crearCookie('name', 'Bryan');
+ crearCookie('correo', 'Bryan@hotmail.com');
+ crearCookie('direccion', 'San José, Costa Rica');
 
-//borrarCookie('nombre');
+ borrarCookie('nombre');
 
-// console.log("Cookie nombre es: ", obtenerCookie("nombre"));
+console.log("Cookie name: ", obtenerCookie("name"));
+ console.log("Cookie correo es: ", obtenerCookie("correo"));
+ console.log("Cookie direccion es: ", obtenerCookie("direccion"));
+
+// borrarCookie('nombre');
+
+console.log("Cookie nombre es segunda linea: ", obtenerCookie("nombre"));
 
 var cookies = document.cookie;
 console.log('Cookies :', cookies);
