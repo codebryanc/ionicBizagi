@@ -1,46 +1,55 @@
-// Declarar dos jugadores, la primera letra mayusc para indicar que es una clase
+// 1 letra May
 function Jugador(nombre){
     this.nombre = nombre;
-    this.pv = 100; // puntos de vida
-    this.sp = 100; // Spetial points
+    this.puntoVida = 100;
+    this.PuntoEspecial = 100;
 
-    // Metodo para curar otro jugador
-    this.Curar = function( jugadorObjetivo ){
-        if(this.sp >= 40){
-            this.sp -= 40;
-            jugadorObjetivo.pv += 20;
-            console.info(jugadorObjetivo.nombre, 'Curado');
-        }
-        else
-            console.info(this.nombre, 'No puede curar a:', jugadorObjetivo.nombre);
-        
-        this.estado(jugadorObjetivo);
+    this.estado = function(jugadorDestino){
+        console.log(this);
+        console.log(jugadorDestino);
     }
-    // Metodo para atacar a otro
-    this.tirarFlecha = function(jugadorObjetivo){
-        if(jugadorObjetivo.pv > 40)
-            jugadorObjetivo.pv -= 40;
+
+    // Metodo Atacar
+    this.tirarFlecha = function(jugadorDestino){
+        if(jugadorDestino.puntoVida > 40){
+            jugadorDestino.puntoVida -= 40;
+        }
         else {
-            jugadorObjetivo.pv = 0;
-            console.error(jugadorObjetivo.nombre + "Murio")
+            jugadorDestino.puntoVida = 0;
+            console.error(jugadorDestino.nombre + " Murio");
         }
 
-        this.estado(jugadorObjetivo);
+        this.estado(jugadorDestino);
     }
-    this.estado = function(jugadorObjetivo){
-        console.info(this);
-        console.info(jugadorObjetivo);
+
+    // Metodo Curar
+    this.curar = function(jugadorDestino){
+        if(this.PuntoEspecial >= 40){
+            this.PuntoEspecial -= 40;
+            jugadorDestino.puntoVida += 20;
+            console.info(jugadorDestino.nombre + " Curado (Puntos de vida:" + jugadorDestino.puntoVida+ ")")
+        }
+
+        this.estado(jugadorDestino);
     }
-};
+}
 
-var gandalf = new Jugador('Gandalf');
-var legolas = new Jugador('Legolas');
+// Jugar
 
-console.log(gandalf);
-console.log(legolas);
+    var gandalf = new  Jugador('Gandalf');
+    var legolas = new  Jugador('Legolas');
 
-gandalf.Curar(legolas);
+// Estado 
 
-// legolas.tirarFlecha(gandalf);
-// legolas.tirarFlecha(gandalf);
-// legolas.tirarFlecha(gandalf);
+// gandalf.estado();
+// legolas.estado();
+
+// gandalf.estado(legolas);
+
+// Atacar
+
+    gandalf.tirarFlecha(legolas);
+
+// Curar
+
+    legolas.curar(gandalf);

@@ -1,10 +1,10 @@
 // La palabra reservada new();
 
-function Persona(){
+function Persona() {
     this.nombre = 'Andrea';
     this.apellido = 'Cortez';
     this.edad = 30;
-    this.nombreCompleto = function(){
+    this.nombreCompleto = function() {
         return (this.nombre + " " + this.apellido);
     }
 }

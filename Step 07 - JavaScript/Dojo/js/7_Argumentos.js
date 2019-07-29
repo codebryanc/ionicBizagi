@@ -15,6 +15,6 @@ function myFuction(a, b, c, d){ // Estos argumentos no hacen referencia a argume
     // console.log(a + undefined);
 }
 
-myFuction(10, 40, {}, function(){}); //  Este argumento es lo que realmente es enviado a la función
+// myFuction(10, 40, {}, function(){}); //  Este argumento es lo que realmente es enviado a la función
 
-//myFuction(10, 40, {}, function(){}, 9); // Error
+myFuction(10, 40, {}, function(){}, 9); // Error

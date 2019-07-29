@@ -4,11 +4,12 @@ function Persona(){
     this.apellido = "Herrera";
 }
 
-Persona.prototype.imprimirInfo = function (){
+var per = new Persona();
+
+Persona.prototype.imprimirInfo = function() {
     console.log(this.nombre + " " + this.apellido + "("+ this.edad +")");
 }
 
-var per = new Persona();
 
 Persona.prototype.pais = "Colombia"; //Cualquier cosa
 
