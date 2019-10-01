@@ -1,8 +1,8 @@
 
-    App
+    App : Funcionalidad en un sitio
     
-    Modulo
+    Modulo : Conjunto de funcionalidades (No reutilizable)
 
-    Componente
+    Componente : parte minima del negocio y es reutilizable
 
-    Modelo
+    Modelo : Objeto
